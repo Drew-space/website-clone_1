@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmrioAI</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+          
+        }
+          
+        body{
+            font-family:Tahoma;
+          
+        }
+
+        .navbar{
+            background-color: #E6E1FA;
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 32px;
+           
+           
+        }
+
+        .navbar a{
+            text-decoration: none;
+            font-size: 25px;
+
+        }
+
+        li{
+            display: inline-block;
+            margin-left: 40px;
+            color: #374151;
+        }
+
+        ul li{
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .Get-started_btn{
+           padding: 8px 16px;
+           color: #171717;
+           background-color: #E6E1FA ;
+           border-width: 1px;
+           border-radius: 20px;
+           font-size: 16px;
+           height: 40px;
+           cursor: pointer;
+           margin-left: 10px;
+        }
+
+
+        .Get-started_btn:hover{
+            background-color: rgb(96, 96, 96);
+            color: white;
+           
+        }
+
+        .Get-started_btn:active{
+            opacity: 0.5;
+        }
+
+       
+
+        .container{
+            background-color:  #E6E1FA ;
+            display: flex;
+             justify-content: space-between;
+          
+            
+
+        }
+
+        .container h1{
+            font-size: 45px;
+            color: #111827;
+           
+           
+        }
+
+        .img-text{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 45px 28px;
+           /* background-color: yellow; */
+        }
+
+        .img-text p{
+            font-size: 18px;
+            color: #374151;
+            margin-top: 24px;
+            line-height: 25px;
+            
+        }
+
+        .img-text button{
+            margin-top: 34px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #ffff;
+            color: #111827;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .img-text button:hover{
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .section_2{
+            background-color: #F0EEFE;
+            /* padding-top: 3px; */
+            padding: 70px 32px;
+            margin-top: 0px;
+
+           
+
+        }
+
+        .section_2 h3{
+            font-size: 30px;
+            margin-bottom: 32px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 0px;
+        }
+
+        .main_section{
+            display: flex;
+            justify-content: space-between;
+            
+            gap: 3px;
+            
+
+        }
+        .main_section h3{
+            padding-right: 2px;
+        }
+
+        .main_section p{
+            font-size: 16px;
+            
+        }
+        
+        .section_2 h4{
+            margin-top:30px ;
+            margin-bottom: 8px;
+        }
+
+        .emoji{
+            background-color: #E6E1FA;
+            margin-bottom: 5000px;
+            /* font-size: 16px; */
+            padding: 8px 8px ;
+            border-radius: 50%;
+            margin-top: 16px;
+        
+        }
+
+
+        .first{
+            background-color: #ffff;
+            padding: 24px;
+            border-radius: 15px;
+            line-height: 25px;
+        }
+
+        .first:hover{
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);;
+        }
+
+        .second{
+            background-color: #FBCFE8;
+            padding: 24px;
+            color: #831843;
+             line-height: 25px;
+              border-radius: 15px;
+          
+        }
+
+        .second:hover{
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);;
+        }
+
+
+        .second span{
+            background-color: rgb(252 231 243 );
+             
+        }
+
+    
+    
+
+        .third{
+            background-color: #d8b4fe;
+            padding: 24px;
+            color: #581C87;
+             line-height: 25px;
+              border-radius: 15px;
+           
+        }
+
+        .third:hover{
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);;
+        }
+
+
+        .section_3{
+            background-color: #edeaff;
+           
+        }
+
+        .sec3{
+            padding: 70px 32px;
+        }
+
+        .sec3 h1{
+            text-align: center;
+            margin-bottom: 32px;
+            margin-top: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+
+        }
+
+        .container_steps{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            /* gap: 10px; */
+        }
+
+        .steps h3{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 8px;
+
+        }
+
+        .step_no{
+            font-size: 25px;
+            font-family: Arial;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto 15px;
+            justify-content: center;
+            
+            
+
+        }
+
+         .steps:nth-last-of-type(1) .step_no{
+            color: #7E22ce;
+            background-color: #F3E8FF;
+            border-radius: 50%;
+           
+           
+        }
+
+        .steps:nth-last-of-type(2) .step_no{
+            color: #BE185D;
+            background-color: #FCE7F3;
+            border-radius: 50%;
+            /* padding: 0; */
+            
+            
+
+        }
+ 
+        .steps:nth-last-of-type(3) .step_no{
+             color: #4F46E5;
+             background-color:#E0E7FF ;
+             border-radius: 50%;
+            
+
+
+        }
+
+        .steps p{
+            font-size: 16px;
+            color: #374151;
+            line-height: 25px;
+        }
+        
+        .last_section{
+            text-align: center;
+            padding: 80px 32px;
+            background-color:  #E6E1FA ;
+        }
+
+        .last_container h2{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 24px;
+        }
+
+        .last_container div{
+            margin-bottom: 24px;
+            line-height: 25PX;
+            color: #374151;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .last_container button{
+            padding:12px 24px;
+            background-color: #4F46E5;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            height: 50px;
+            border-radius: 25px;
+
+        }
+
+        .last_section button:hover{
+            background-color: #303f9f;
+        }
+
+        .copyright_container{
+            text-align: center;
+            padding: 32px;
+            font-size: 16px;
+            background-color: #F0EEFE;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #374151;
+        }
+
+        
+
+
+
+        /* .section_3{
+            background-color: #edeaff;
+            /* text-align: center; */
+            /* display: flex; */
+         
+        
+
+        /* .section_3 h1{
+            font-size: 24px;
+        }
+
+        .container_steps{
+            display: flex;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            
+        
+
+        /* .step_no{
+            font-size: 35px;
+            font-family: Arial;
+            
+
+        }
+
+        .step:nth-last-of-type(1) .step_no{
+            color: #7E22ce;
+            background-color: #F3E8FF;
+           
+        }
+
+        .step:nth-last-of-type(2) .step_no{
+            color: #BE185D;
+            background-color: #FCE7F3; */
+
+        
+/* 
+        .step:nth-last-of-type(3) .step_no{
+             color: #4F46E5;
+             background-color:#E0E7FF ;
+             width: 100px;
+
+
+        }
+
+         */
+
+         
+
+       
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="">
+          <div>CalmrioAI</div>
+        </a>
+        <ul>
+            <li>Home </li>
+            <li> Feature</li>
+            <li>About</li>
+        </ul>
+
+        <div>
+            <span>Login</span>
+            <button class="Get-started_btn">Get Started</button>
+        </div>
+    </nav>
+    <hr>
+
+
+    <div class="container">
+        <div class="img-text">
+            <h1>Your trusted <br> emotional <br> support companion, right <br> at your fingertips.</h1>
+            <p>Experience understanding and empathy like never before. <br>CalmrioAI listens, learns, and supports you through every <br>
+            emotional journey, ensuring you feel heard and cared for.</p>
+            <button>Talk to CalmrioAI</button>
+        </div>
+
+        <div>
+            <img src="robott.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="section_2">
+                <h3>What CalmrioAI Offers</h3>
+                <div class="main_section">
+                    <div class="first">
+                        <span class="emoji"> 🤍</span>
+                        <h4>Empathetic Conversations</h4>
+                    
+                        <p>Speak freely and openly. CalmrioAI provides a <br> warm, understanding presence whenever you <br> need to
+                            share
+                            your feelings.</p>
+                    </div>
+                    <div class="second">
+                        <span class="emoji"> 🌸</span>
+                        <h4>24/7 Availability</h4>
+                        <p>
+                            Day or night, CalmrioAI is here to listen, <br> comfort, and guide you, ensuring that support <br> is always
+                            within reach.
+                        </p>
+                    
+                    </div>
+                    <div class="third">
+                        <span class="emoji"> 💜</span>
+                        <h4>Personalized Insight</h4>
+                        <p>
+                            Receive guidance tailored to your emotional <br> landscape, helping you gain clarity, resilience, <br> and
+                            self-understanding.
+                        </p>
+                    
+                    </div>
+
+                </div>
+
+    </div>
+
+    <div class="section_3">
+        <div class="sec3">
+            <h1>how it works</h1>
+            <div class="container_steps">
+                <div class="steps">
+                    <div class="step_no">1</div>
+                    <h3>Initiate a Conversation</h3>
+                    <p>Begin your session by simply starting to talk. <br> CalmrioAI is ready to listen, anytime.</p>
+
+                 </div>
+                  <div class="steps">
+                    <div class="step_no">2</div>
+                    <h3>Share Your Feelings</h3>
+                    <p>Open up about your emotions, thoughts, or <br> concerns. CalmrioAI adapts to understand you <br> better.</p>
+
+                </div>
+                <div class="steps">
+                   <div class="step_no">3</div>
+                  <h3>Receive Support</h3>
+                  <p>Gain insights, comfort, and personalized guidance <br> to help you navigate your emotional journey.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+    <div class="last_section">
+        <div class="last_container">
+            <h2>Ready to Begin Your Emotional Journey?</h2>
+            <div> Start a conversation with CalmrioAI today and experience the <br> difference personalized emotional support can make.</div>
+            <button>Get started Now</button>
+        </div>
+    </div>
+
+    <div class="copyright_container">
+        <div>
+            <p>© 2024 CalmrioAI. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- <section class="section_3">
+        <h2>how it works</h2>
+        <div class="container_steps">
+            <div class="step">
+                <div class="step_no">1</div>
+                <h3>Initiate a Conversation</h3>
+                <p>Begin your session by simply starting to talk. <br> CalmrioAI is ready to listen, anytime.</p>
+
+            </div>
+
+            <div class="step">
+                <div class="step_no">
+                    2
+                </div>
+                <h3>Share Your Feelings</h3>
+                <p>Open up about your emotions, thoughts, or <br> concerns. CalmrioAI adapts to understand you <br> better.</p>
+            
+            </div>
+
+            <div class="step">
+                <div class="step_no">
+                    3
+                </div>
+                <h3>Receive Support</h3>
+                <p>Gain insights, comfort, and personalized guidance <br> to help you navigate your emotional journey.</p>
+            
+            </div>
+
+
+
+
+        </div>
+    </section> -->
+
+    
+   
+    
+</body>
+</html>
